@@ -1,5 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
+import {registerLocaleData} from '@angular/common';
+import localeDE from '@angular/common/locales/de';
+
 import {SuiModule} from 'ng2-semantic-ui';
 
 import {AppComponent} from './app.component';
@@ -14,6 +17,7 @@ import { SearchComponent } from './search/search.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import {DateValueAccessorModule} from 'angular-date-value-accessor';
 import {FormsModule} from '@angular/forms';
+import {BookStoreService} from './shared/book-store.service';
 
 @NgModule({
   declarations: [
@@ -28,8 +32,11 @@ import {FormsModule} from '@angular/forms';
   imports: [
     SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, FormsModule
   ],
-  providers: [],
+  providers: [BookStoreService , { provide: LOCALE_ID, useValue: 'de'}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor() {
+    registerLocaleData(localeDE);
+  }
 }
