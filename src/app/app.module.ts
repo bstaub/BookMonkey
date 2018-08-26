@@ -18,6 +18,7 @@ import { BookFormComponent } from './book-form/book-form.component';
 import {DateValueAccessorModule} from 'angular-date-value-accessor';
 import {FormsModule} from '@angular/forms';
 import {BookStoreService} from './shared/book-store.service';
+import { IsbnPipe } from './shared/isbn.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {BookStoreService} from './shared/book-store.service';
     BookDetailsComponent,
     HomeComponent,
     SearchComponent,
-    BookFormComponent
+    BookFormComponent,
+    IsbnPipe
   ],
   imports: [
     SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, FormsModule
