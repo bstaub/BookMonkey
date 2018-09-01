@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
-import { Book, Thumbnail } from '../shared/book';
-import {BookStoreService} from '../shared/book-store.service';
+import { Book, Thumbnail } from '../../shared/book';
+import {BookStoreService} from '../../shared/book-store.service';
 import {Observable} from 'rxjs';
 
 @Component({

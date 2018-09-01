@@ -1,9 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {Book} from '../shared/book';
-import {BookFactory} from '../shared/book-factory';
+import {Book} from '../../shared/book';
+import {BookFactory} from '../../shared/book-factory';
 import {BookFormErrorMessages} from './book-form-error-messages';
 import {NgForm} from '@angular/forms';
-import {BookStoreService} from '../shared/book-store.service';
+import {BookStoreService} from '../../shared/book-store.service';
 
 @Component({
   selector: 'bm-book-form',

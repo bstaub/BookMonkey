@@ -1,4 +1,4 @@
-import { IsbnPipe } from './isbn.pipe';
+import { IsbnPipe } from '../book/shared/isbn.pipe';
 
 describe('IsbnPipe', () => {
   it('create an instance', () => {
