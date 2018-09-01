@@ -19,6 +19,8 @@ import {DateValueAccessorModule} from 'angular-date-value-accessor';
 import {FormsModule} from '@angular/forms';
 import {BookStoreService} from './shared/book-store.service';
 import { IsbnPipe } from './shared/isbn.pipe';
+import { ZoomDirective } from './shared/zoom.directive';
+import { DelayDirective } from './shared/delay.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { IsbnPipe } from './shared/isbn.pipe';
     HomeComponent,
     SearchComponent,
     BookFormComponent,
-    IsbnPipe
+    IsbnPipe,
+    ZoomDirective,
+    DelayDirective
   ],
   imports: [
     SuiModule, BrowserModule, AppRoutingModule, HttpClientModule, DateValueAccessorModule, FormsModule
